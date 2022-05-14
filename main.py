@@ -9,7 +9,7 @@ if __name__ == '__main__':
     options.add_argument('--log-level=3')
   
     # Provide the path of chromedriver present on your system.
-    driver = webdriver.Chrome("/Users/tuannd/Documents/GitHub/selenium-acs/selenium/webdriver/chrome",
+    driver = webdriver.Chrome("/Users/tuannd/Documents/GitHub/selenium-acs/selenium/webdriver/chrome/chromedriver2",
                               chrome_options=options)
     driver.set_window_size(1920,1080)
   
