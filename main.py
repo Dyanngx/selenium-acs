@@ -1,3 +1,4 @@
+from sqlite3 import Time
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 import time
@@ -20,14 +21,16 @@ if __name__ == '__main__':
   
     # Send a get request to the url
     driver.get('https://accounts.shopify.com/lookup')
-    inputEmail = driver.find_element_by_class_name('next-input type-ahead-input email-typo-input')
-    inputEmail.get_attribute('value')
-    # btnLogin.click()
-   
-    # inputUser = driver.find_element_by_name('user')
-    # inputPass = driver.find_elements_by_name('pass')
-    # inputUser.get_attribute('value')
-    # inputPass.get_attribute('value')
-    # btnNext = driver.find_element_by_class_name('ui-button ui-button--primary ui-button--full-width ui-button--size-large')
-    # btnNext.click()
+    inputEmail = driver.find_element_by_name('account[email]')
+    # inputEmail.get_attribute('value')
+    inputEmail.send_keys('dinhtuannguyen469@gmail.com')
+    btnNext = driver.find_element_by_name('commit')
+    time.sleep(5)
+    btnNext.click()
+    time.sleep(10)
+    inputPass = driver.find_element_by_name('account[password]')
+    inputPass.send_keys('Tuan0697@')
+    time.sleep(10)
+    btnNext.click()
+    
    
