@@ -1,6 +1,6 @@
-from sqlite3 import Time
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+import urllib3
 import time
   
 # Main Function
